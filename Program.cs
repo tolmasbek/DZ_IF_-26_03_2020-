@@ -6,7 +6,11 @@ namespace DZ_if_26_03_2020
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+             /*
+             Задание 1
+                Выучите основные конструкции и понятия, рассмотренные на уроке
+            */
+            Console.WriteLine("OK!");
             
             Console.ReadKey();
         }
