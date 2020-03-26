@@ -20,9 +20,13 @@ namespace DZ_if_26_03_2020
             */
 
             decimal sumPurchase;
-            decimal discount = 0;
+            decimal discount = 0m;
             Console.Write("sum_purchase = ");
-            sumPurchase = decimal.Parse(Console.Read());
+            sumPurchase = decimal.Parse(Console.ReadLine());
+            if(sumPurchase < 500)
+            {
+                Console.WriteLine("Your sum purchase = " + sumPurchase + "\nNo discount.");
+            }
             if(sumPurchase >= 500)
             {
                 discount = (sumPurchase * 3) / 100;
