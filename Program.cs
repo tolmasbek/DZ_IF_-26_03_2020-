@@ -51,34 +51,42 @@ namespace DZ_if_26_03_2020
             */
 
             int n1 = 5;
-            int n2 = 4;
-            int n3 = 2;
-            int n4 = 3;
-            int min = 0;
-            if(!(n1 < n2) && (n2 < n3) && (n3 < n4))
+            int n2 = 10;
+            int n3 = 15;
+            int n4 = 25;
+            
+            int min = n1;
+            int proizvedenie = n1 * n2 * n3 * n4;
+            
+            if((n1 < n2) && (n2 < n3) && (n3 < n4))
             {
-                if((n1 < n2) && (n1 < n3) && (n1 < n4))
+                Console.WriteLine("Chisla raspologheni po vozrastaniyu.");
+            }
+            else if((n1 == n2) && (n2 == n3) && (n3 == n4))
+            {
+                Console.WriteLine(proizvedenie);
+            }
+            else
+            {
+                if((min < n2) && (min < n3) && (min < n4))
                 {
                     min = n1;
                 }
-                if((n2 < n1) && (n2 < n3) && (n2 < n4))
+                if((n2 < min) && (n2 < n3) && (n2 < n4))
                 {
                     min = n2;
                 }
-                if((n3 < n1) && (n3 < n2) && (n3 < n4))
+                if((n3 < min) && (n3 < n2) && (n3 < n4))
                 {
-                    min = n3;
-                    
+                    min = n3;        
                 }
-                if((n4 < n1) && (n4 < n2) && (n4 < n3))
+                if((n4 < min) && (n4 < n2) && (n4 < n3))
                 {
                     min = n4;
                 }
                 Console.WriteLine(min);
             }
             
-
-
             /*
                 o Задание 4
                     o Запрашиваются три числа для переменных a, b, c. Значения переменных поменять
