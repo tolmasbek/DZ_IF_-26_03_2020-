@@ -8,6 +8,7 @@ namespace DZ_if_26_03_2020
         {
             Console.WriteLine("Hello World!");
             
+            Console.ReadKey();
         }
     }
 }
