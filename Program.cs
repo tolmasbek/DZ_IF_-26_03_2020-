@@ -97,11 +97,11 @@ namespace DZ_if_26_03_2020
             int a, b, c;
             int pusto = 0;
 
-                Console.WriteLine("Vvedite a = ");
+                Console.Write("Vvedite a = ");
             a = int.Parse(Console.ReadLine());
-                Console.WriteLine("Vvedite b = ");
+                Console.Write("Vvedite b = ");
             b = int.Parse(Console.ReadLine());
-                Console.WriteLine("Vvedite c = ");
+                Console.Write("Vvedite c = ");
             c = int.Parse(Console.ReadLine());
             if(b > a)
             {
