@@ -21,6 +21,7 @@ namespace DZ_if_26_03_2020
 
             decimal sumPurchase;
             decimal discount = 0m;
+            
             Console.Write("sum_purchase = ");
             sumPurchase = decimal.Parse(Console.ReadLine());
             if(sumPurchase < 500)
@@ -57,10 +58,11 @@ namespace DZ_if_26_03_2020
             
             int min = n1;
             int proizvedenie = n1 * n2 * n3 * n4;
-            
+            string message = "Числа расположены по возрастанию.";
+
             if((n1 < n2) && (n2 < n3) && (n3 < n4))
             {
-                Console.WriteLine("Chisla raspologheni po vozrastaniyu.");
+                Console.WriteLine(message);
             }
             else if((n1 == n2) && (n2 == n3) && (n3 == n4))
             {
@@ -92,7 +94,44 @@ namespace DZ_if_26_03_2020
                     o Запрашиваются три числа для переменных a, b, c. Значения переменных поменять
                     таким образом, чтобы a >= b >= c.
             */
-            
+            int a, b, c;
+            int pusto = 0;
+
+            int maxim, minim, sred;
+
+                Console.WriteLine("Vvedite a = ");
+            a = int.Parse(Console.ReadLine());
+                Console.WriteLine("Vvedite b = ");
+            b = int.Parse(Console.ReadLine());
+                Console.WriteLine("Vvedite c = ");
+            c = int.Parse(Console.ReadLine());
+
+            if(a>b && a>c){
+                maxim = a; 
+            }else if(b>a && b>c){
+                maxim = b;
+            }else {
+                maxim = c;
+            }
+            if(b>a && a>c){
+                sred = a; 
+            }else if(a>b && b>c){
+                sred = b;
+            }else {
+                sred = c;
+            }
+            if(b>a && a<c){
+                sred = a; 
+            }else if(a>b && b>c){
+                sred = b;
+            }else {
+                sred = c;
+            }
+             
+
+            Console.WriteLine(maxim);
+
+
             Console.ReadKey();
         }
     }
