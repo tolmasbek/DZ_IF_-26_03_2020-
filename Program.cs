@@ -97,41 +97,40 @@ namespace DZ_if_26_03_2020
             int a, b, c;
             int pusto = 0;
 
-            int maxim, minim, sred;
-
                 Console.WriteLine("Vvedite a = ");
             a = int.Parse(Console.ReadLine());
                 Console.WriteLine("Vvedite b = ");
             b = int.Parse(Console.ReadLine());
                 Console.WriteLine("Vvedite c = ");
             c = int.Parse(Console.ReadLine());
-
-            if(a>b && a>c){
-                maxim = a; 
-            }else if(b>a && b>c){
-                maxim = b;
-            }else {
-                maxim = c;
+            if(b > a)
+            {
+                pusto = a; 
+                a = b; 
+                b = pusto;
             }
-            if(b>a && a>c){
-                sred = a; 
-            }else if(a>b && b>c){
-                sred = b;
-            }else {
-                sred = c;
+            if(c > a)
+            {
+                pusto = a; 
+                a = c; 
+                c = pusto;
             }
-            if(b>a && a<c){
-                sred = a; 
-            }else if(a>b && b>c){
-                sred = b;
-            }else {
-                sred = c;
+            if(c > b)
+            {
+                pusto = b; 
+                b = c; 
+                c = pusto;
             }
-             
+            Console.WriteLine(a + " >= " + b + " >= " + c);
 
-            Console.WriteLine(maxim);
-
-
+            ////////////////////////////////////////////////////////////////////////////////////////
+            /// У меня не получилось по своему, сначало я хотел найти максимум, среднее, минимум и
+            /// в конце поменять местами, 
+            /// но вот так короче сделать недодумался
+            /// если честно я посмотрел с инета на другом языке
+            /// 
+            /////////////////////////////////////////////////////////////////////////////////////////
+            
             Console.ReadKey();
         }
     }
