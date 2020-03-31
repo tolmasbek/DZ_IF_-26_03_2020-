@@ -26,21 +26,22 @@ namespace DZ_if_26_03_2020
             Console.Write("sum_purchase = ");
             sumPurchase = decimal.Parse(Console.ReadLine());
 
-            if(sumPurchase < 500)
+            if(sumPurchase >= 1000)
             {
-                stoimost = sumPurchase;
-                Console.WriteLine("Stoimost vashey pokepki = " + stoimost + " No discount");
+                discount = (sumPurchase * 5) / 100;
+                stoimost = sumPurchase - discount;
+                Console.WriteLine(stoimost + " so skidkoy 5 %");
             }else if(sumPurchase >= 500)
             {
                 discount = (sumPurchase * 3) / 100;
                 stoimost = sumPurchase - discount;
                 Console.WriteLine(stoimost + " so skidkoy 3 %");
                 
-            }else if(sumPurchase >= 1000)
+            }
+            if(sumPurchase < 500)
             {
-                discount = (sumPurchase * 5) / 100;
-                stoimost = sumPurchase - discount;
-                Console.WriteLine(stoimost + " so skidkoy 5 %");
+                stoimost = sumPurchase;
+                Console.WriteLine("Stoimost vashey pokupki = " + stoimost + " No discount");
             }
             
             
